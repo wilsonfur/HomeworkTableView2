@@ -1,24 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ETu-W8-SRn">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--JoJo奇妙的冒險-->
+        <scene sceneID="uet-G7-sXF">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <tableViewController id="fud-Rr-ovf" customClass="RoleListTableViewController" customModule="HomeworkTableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="m5H-JY-NmI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" id="Ox5-rk-VSh" customClass="RoleTableViewCell" customModule="HomeworkTableView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ox5-rk-VSh" id="Gz9-Ay-WWk">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="99.666666666666671"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jojo" translatesAutoresizingMaskIntoConstraints="NO" id="NS6-iM-Xj5">
+                                            <rect key="frame" x="10" y="10" width="80" height="80"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="80" id="NMt-3O-s8r"/>
+                                                <constraint firstAttribute="width" constant="80" id="xd6-0w-fxU"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="40"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RoleNameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Fi-it-RLj">
+                                            <rect key="frame" x="100" y="26" width="223" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="yhk-WT-bC8"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StandNameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQ1-Uf-IAK">
+                                            <rect key="frame" x="100" y="61" width="223" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="SQ1-Uf-IAK" firstAttribute="leading" secondItem="NS6-iM-Xj5" secondAttribute="trailing" constant="10" id="3mu-Nn-aCK"/>
+                                        <constraint firstItem="NS6-iM-Xj5" firstAttribute="top" secondItem="Gz9-Ay-WWk" secondAttribute="top" constant="10" id="E6d-nn-3SB"/>
+                                        <constraint firstAttribute="bottom" secondItem="NS6-iM-Xj5" secondAttribute="bottom" constant="10" id="HE7-a1-ai5"/>
+                                        <constraint firstItem="6Fi-it-RLj" firstAttribute="top" secondItem="Gz9-Ay-WWk" secondAttribute="topMargin" constant="15" id="Mzm-9s-tfV"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="6Fi-it-RLj" secondAttribute="trailing" constant="10" id="R3K-qg-6VQ"/>
+                                        <constraint firstItem="SQ1-Uf-IAK" firstAttribute="top" secondItem="Gz9-Ay-WWk" secondAttribute="topMargin" constant="50" id="cAi-Zv-ukq"/>
+                                        <constraint firstItem="NS6-iM-Xj5" firstAttribute="leading" secondItem="Gz9-Ay-WWk" secondAttribute="leading" constant="10" id="iKO-ow-Jc2"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="SQ1-Uf-IAK" secondAttribute="trailing" constant="10" id="m7h-lr-IZa"/>
+                                        <constraint firstItem="6Fi-it-RLj" firstAttribute="leading" secondItem="NS6-iM-Xj5" secondAttribute="trailing" constant="10" id="rLq-jd-Hh3"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="roleNameLabel" destination="6Fi-it-RLj" id="ygN-ww-uMU"/>
+                                    <outlet property="standNameLabel" destination="SQ1-Uf-IAK" id="Mae-nI-3z3"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="fud-Rr-ovf" id="vkv-rx-nfb"/>
+                            <outlet property="delegate" destination="fud-Rr-ovf" id="UoK-Bl-bxY"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="JoJo奇妙的冒險" id="SOs-nw-way"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E3I-hs-y1t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1324" y="132.68365817091455"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="E3X-20-0vX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ETu-W8-SRn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="F04-NE-cAU">
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fud-Rr-ovf" kind="relationship" relationship="rootViewController" id="X6k-IM-pHd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3pJ-3o-oK7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="439" y="133"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="jojo" width="200" height="200"/>
+    </resources>
 </document>

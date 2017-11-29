@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		C858C38F1FCEF6D60009C2A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C858C38E1FCEF6D60009C2A3 /* AppDelegate.swift */; };
-		C858C3911FCEF6D60009C2A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C858C3901FCEF6D60009C2A3 /* ViewController.swift */; };
 		C858C3941FCEF6D60009C2A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C858C3921FCEF6D60009C2A3 /* Main.storyboard */; };
 		C858C3961FCEF6D60009C2A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C858C3951FCEF6D60009C2A3 /* Assets.xcassets */; };
 		C858C3991FCEF6D60009C2A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C858C3971FCEF6D60009C2A3 /* LaunchScreen.storyboard */; };
+		C858C3A11FCEF8230009C2A3 /* RoleListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C858C3A01FCEF8230009C2A3 /* RoleListTableViewController.swift */; };
+		C858C3A31FCEFC140009C2A3 /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = C858C3A21FCEFC140009C2A3 /* Role.swift */; };
+		C858C3A51FCF030F0009C2A3 /* RoleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C858C3A41FCF030F0009C2A3 /* RoleTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C858C38B1FCEF6D60009C2A3 /* HomeworkTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeworkTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C858C38E1FCEF6D60009C2A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C858C3901FCEF6D60009C2A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C858C3931FCEF6D60009C2A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C858C3951FCEF6D60009C2A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C858C3981FCEF6D60009C2A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C858C39A1FCEF6D60009C2A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C858C3A01FCEF8230009C2A3 /* RoleListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleListTableViewController.swift; sourceTree = "<group>"; };
+		C858C3A21FCEFC140009C2A3 /* Role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
+		C858C3A41FCF030F0009C2A3 /* RoleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +58,14 @@
 		C858C38D1FCEF6D60009C2A3 /* HomeworkTableView */ = {
 			isa = PBXGroup;
 			children = (
+				C858C3A41FCF030F0009C2A3 /* RoleTableViewCell.swift */,
+				C858C3A01FCEF8230009C2A3 /* RoleListTableViewController.swift */,
 				C858C38E1FCEF6D60009C2A3 /* AppDelegate.swift */,
-				C858C3901FCEF6D60009C2A3 /* ViewController.swift */,
 				C858C3921FCEF6D60009C2A3 /* Main.storyboard */,
 				C858C3951FCEF6D60009C2A3 /* Assets.xcassets */,
 				C858C3971FCEF6D60009C2A3 /* LaunchScreen.storyboard */,
 				C858C39A1FCEF6D60009C2A3 /* Info.plist */,
+				C858C3A21FCEFC140009C2A3 /* Role.swift */,
 			);
 			path = HomeworkTableView;
 			sourceTree = "<group>";
@@ -136,8 +142,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C858C3911FCEF6D60009C2A3 /* ViewController.swift in Sources */,
+				C858C3A11FCEF8230009C2A3 /* RoleListTableViewController.swift in Sources */,
 				C858C38F1FCEF6D60009C2A3 /* AppDelegate.swift in Sources */,
+				C858C3A31FCEFC140009C2A3 /* Role.swift in Sources */,
+				C858C3A51FCF030F0009C2A3 /* RoleTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
