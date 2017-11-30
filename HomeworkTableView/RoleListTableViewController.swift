@@ -13,17 +13,14 @@ import UIKit
 
 class RoleListTableViewController: UITableViewController {
     
-    var roles = [role]()
+    var roles = [Role]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        roles.append(role(roleName:"承太郎",StandName:"白金之星",rolePicture:""))
-        roles.append(role(roleName:"喬瑟夫",StandName:"隱者之紫",rolePicture:""))
-        roles.append(role(roleName:"喬瑟夫",StandName:"隱者之紫",rolePicture:""))
-
-        for i in 0..<roles.count{
-
-        }
+        roles.append(Role(roleName:"承太郎",StandName:"白金之星",rolePicture:""))
+        roles.append(Role(roleName:"喬瑟夫",StandName:"隱者之紫",rolePicture:""))
+        roles.append(Role(roleName:"喬瑟夫",StandName:"隱者之紫",rolePicture:""))
+       
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,7 +39,9 @@ class RoleListTableViewController: UITableViewController {
 
  
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "roleCell", for: indexPath)
+        
+        let role = roles[indexPath.row]
 
         return cell
     }

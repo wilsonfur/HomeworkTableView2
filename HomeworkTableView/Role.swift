@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct role {
+struct Role {
     var roleName : String
     var StandName : String
     var rolePicture : String
