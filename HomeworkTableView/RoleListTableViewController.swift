@@ -7,19 +7,39 @@
 //
 
 import UIKit
-
+var roles = [Role]()
 
 
 
 class RoleListTableViewController: UITableViewController {
-    var roles = [Role]()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        roles.append(Role(roleName:"承太郎",StandName:"白金之星",rolePicture:""))
-        roles.append(Role(roleName:"喬瑟夫",StandName:"隱者之紫",rolePicture:""))
-        roles.append(Role(roleName:"喬瑟夫",StandName:"隱者之紫",rolePicture:""))
-       
+        roles.append(Role(name:"空条承太郎",stand:"白金之星",imageName:""))
+        roles.append(Role(name:"喬瑟夫‧喬斯達",stand:"隱者之紫",imageName:""))
+        roles.append(Role(name:"穆罕默德．阿布德爾",stand:"紅色魔術師",imageName:""))
+        roles.append(Role(name:"花京院典明",stand:"綠之法皇",imageName:""))
+        roles.append(Role(name:"約翰．皮耶爾．波魯納雷夫",stand:"銀色戰車",imageName:""))
+        roles.append(Role(name:"伊奇",stand:"愚者",imageName:""))
+        roles.append(Role(name:"DIO",stand:"世界",imageName:""))
+        roles.append(Role(name:"蜜朵拉",stand:"女教皇",imageName:""))
+        roles.append(Role(name:"卡梅歐",stand:"審判",imageName:""))
+        roles.append(Role(name:"マニッシュ．ボーイ",stand:"死神13",imageName:""))
+        roles.append(Role(name:"アラビア．ファッツ",stand:"太陽",imageName:""))
+        roles.append(Role(name:"丹",stand:"戀人",imageName:""))
+        roles.append(Role(name:"卡梅歐",stand:"審判",imageName:""))
+        roles.append(Role(name:"奈亞婆",stand:"正義",imageName:""))
+        roles.append(Role(name:"ズィー．ズィー",stand:"命運的車輪",imageName:""))
+        roles.append(Role(name:"妮娜",stand:"女帝",imageName:""))
+        roles.append(Role(name:"荷爾．荷斯",stand:"皇帝",imageName:""))
+        roles.append(Role(name:"J．凱爾",stand:"倒吊男",imageName:""))
+        roles.append(Role(name:"Rubber Soul",stand:"黃色節制",imageName:""))
+        roles.append(Role(name:"咒いのデーボ",stand:"黑木惡魔",imageName:""))
+        roles.append(Role(name:"Forever",stand:"力量",imageName:""))
+        roles.append(Role(name:"迪尼爾船長",stand:"暗青之月",imageName:""))
+        roles.append(Role(name:"格雷普萊",stand:"灰塔",imageName:""))
+
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,11 +56,22 @@ class RoleListTableViewController: UITableViewController {
         return roles.count
     }
 
- 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "roleCell", for: indexPath)
-
-        return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "roleCell", for: indexPath) as? RoleTableViewCell
+        
+        let role = roles[indexPath.row]
+        cell?.roleNameLabel.text = role.name
+        cell?.standNameLabel.text = "替身:\(role.stand)"
+        
+        return cell!
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let roleDetailViewController = segue.destination as?
+        RoleDetailViewController
+        if let row = tableView.indexPathForSelectedRow?.row {
+           
+        }
     }
 
 
@@ -79,14 +110,9 @@ class RoleListTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+
+
+
 
 }

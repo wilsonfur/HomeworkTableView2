@@ -9,7 +9,8 @@
 import Foundation
 
 struct Role {
-    var roleName : String
-    var StandName : String
-    var rolePicture : String
+    var name : String
+    var stand : String
+    var imageName : String
 }
+

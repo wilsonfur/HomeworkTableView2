@@ -7,8 +7,14 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--JoJo奇妙的冒險-->
         <scene sceneID="uet-G7-sXF">
@@ -43,7 +49,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="yhk-WT-bC8"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -69,6 +75,7 @@
                                 <connections>
                                     <outlet property="roleNameLabel" destination="6Fi-it-RLj" id="ygN-ww-uMU"/>
                                     <outlet property="standNameLabel" destination="SQ1-Uf-IAK" id="Mae-nI-3z3"/>
+                                    <segue destination="Tju-jl-oUd" kind="show" identifier="roleDetail" id="eHH-Tf-Iks"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -77,19 +84,53 @@
                             <outlet property="delegate" destination="fud-Rr-ovf" id="UoK-Bl-bxY"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="JoJo奇妙的冒險" id="SOs-nw-way"/>
+                    <navigationItem key="navigationItem" title="JoJo奇妙的冒險" largeTitleDisplayMode="always" id="SOs-nw-way"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E3I-hs-y1t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1324" y="132.68365817091455"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="gO5-gV-7pm">
+            <objects>
+                <viewController id="Tju-jl-oUd" customClass="RoleDetailViewController" customModule="HomeworkTableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ePb-tF-NJF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4nb-dk-ohE">
+                                <rect key="frame" x="67" y="140" width="240" height="346"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FX5-Vu-d4t">
+                                <rect key="frame" x="34" y="515" width="306" height="263"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="HYQ-lg-o4L"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" largeTitleDisplayMode="always" id="tlI-Gz-3TE"/>
+                    <connections>
+                        <outlet property="detailViewTitle" destination="tlI-Gz-3TE" id="GTg-CI-b3h"/>
+                        <outlet property="roleStory" destination="FX5-Vu-d4t" id="ikz-ia-4CQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QwL-Fe-y7v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2087.1999999999998" y="132.26600985221674"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="E3X-20-0vX">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ETu-W8-SRn" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="F04-NE-cAU">
-                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="F04-NE-cAU">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
