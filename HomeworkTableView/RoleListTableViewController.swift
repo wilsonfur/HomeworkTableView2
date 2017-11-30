@@ -12,7 +12,6 @@ import UIKit
 
 
 class RoleListTableViewController: UITableViewController {
-    
     var roles = [Role]()
     
     override func viewDidLoad() {
@@ -40,8 +39,6 @@ class RoleListTableViewController: UITableViewController {
  
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "roleCell", for: indexPath)
-        
-        let role = roles[indexPath.row]
 
         return cell
     }
